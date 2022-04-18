@@ -178,6 +178,7 @@ class TwigExtension extends AbstractExtension
 
         if (null === $this->markdown) {
             $this->markdown = new Parsedown();
+            $this->markdown->setBreaksEnabled(true);
         }
 
         $desc           = str_replace(['<code>', '</code>'], ['```', '```'], $desc);
